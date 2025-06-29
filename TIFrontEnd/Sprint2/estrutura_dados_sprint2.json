@@ -1,0 +1,117 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "id": "3",
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "403a",
+      "titulo": "Teste 1",
+      "descricao": "vndjbnvidbsavisda",
+      "categorias": ["3", "4"],
+      "status": ["Em andamento"],
+      "dataHora": "2025-05-23T19:59"
+    },
+    {
+      "id": "af52",
+      "titulo": "Teste 2",
+      "descricao": "vdvnbidsoabviudsa",
+      "categorias": ["2", "1"],
+      "status": ["Em teste"],
+      "dataHora": "2025-05-22T19:59"
+    },
+    {
+      "id": "628e",
+      "titulo": "Teste 3",
+      "descricao": "vdhusgvuidsa",
+      "categorias": ["2", "4"],
+      "status": ["Feito"],
+      "dataHora": "2025-05-06T20:00"
+    },
+    {
+      "id": "ab26",
+      "titulo": "Teste 4",
+      "descricao": "bvcduhvbcuysay",
+      "categorias": ["3"],
+      "status": ["Em progresso"],
+      "dataHora": "2025-05-14T20:01"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Casa",
+      "cor": "#FF5733",
+      "descricao": "A fazeres domesticos"
+    },
+    {
+      "id": 2,
+      "nome": "Trabalho",
+      "cor": "#FFA500",
+      "descricao": "Tarefas e compromissos do emprego"
+    },
+    {
+      "id": 3,
+      "nome": "Familia",
+      "cor": "#33FF57",
+      "descricao": "Passeios e compromissos com a familia"
+    },
+    {
+      "id": 4,
+      "nome": "Faculdade",
+      "cor": "#FF0000",
+      "descricao": "Atividades e compromissos da faculdade"
+    }
+  ],
+  "rel_cat_tar": [],
+  "subtarefas": [],
+  "sobreNos": [
+    {
+      "id": 1,
+      "nome": "Lucca de Paula",
+      "curso": "Ciência da Computação",
+      "descricao": "Sou estudante da PUC",
+      "gostos": ["Programar"]
+    },
+    {
+      "id": 2,
+      "nome": "Mateus",
+      "curso": "Ciência da Computação",
+      "descricao": "Sou estudante da PUC",
+      "gostos": ["Programar"]
+    },
+    {
+      "id": 3,
+      "nome": "Enzo Russo",
+      "curso": "Ciência da Computação",
+      "descricao": "Sou estudante da PUC",
+      "gostos": ["Programar"]
+    },
+    {
+      "id": 4,
+      "nome": "Pedro Mattar",
+      "curso": "Ciência da Computação",
+      "descricao": "Sou estudante da PUC",
+      "gostos": ["Programar"]
+    }
+  ]
+}
