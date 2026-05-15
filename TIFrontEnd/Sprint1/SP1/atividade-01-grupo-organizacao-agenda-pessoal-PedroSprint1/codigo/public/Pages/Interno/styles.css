@@ -1,0 +1,463 @@
+body {
+    min-height: 200vh;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header #open-navigation-btn {
+    padding: 1rem 2rem;
+    background: gray;
+    cursor: pointer;
+}
+
+header a img {
+    max-width: 10rem;
+}
+
+header>a {
+    transition: all .5s ease;
+}
+
+header>a:hover {
+    transform: scale(1.05);
+}
+
+header .profile-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    background: linear-gradient(to bottom left, rgb(246, 173, 105), rgb(246, 40, 145));
+}
+
+header .profile-btn i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+header .profile-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+header .profile-btn-container .profile-dropdown-container {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    pointer-events: none;
+    opacity: 0%;
+    z-index: 100;
+}
+
+header .profile-btn-container {
+
+}
+
+header .profile-btn-container:hover .profile-dropdown-container {
+    pointer-events: all;
+    opacity: 100%;
+}
+
+header .profile-btn-container:hover .profile-dropdown-container .profile-dropdown-content {
+    background-color: rgb(214, 145, 145);
+    width: 500px;
+    height: 50vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.txtPerfil{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.btMudarPerfil{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+
+section.secMudar{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.formEdit{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+input.inputEdit{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+    border: solid 2px #e07967;
+}
+
+label.lbText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+button.butaoEdit{
+    width: 150px;
+    font-size: 25px;
+    background-color: #e07967;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+button.butaoEdit:hover{
+    filter: brightness(70%);
+}
+
+aside {
+    position: fixed;
+    background-color: #ececec;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: .5s ease;
+    transform: translateX(0);
+}
+
+aside.closed {
+    transform: translateX(-100%);
+}
+
+aside nav h5 {
+    font-size: 1.3rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+aside nav ul {
+    list-style: none;
+    margin: .5rem 0 0 1rem;
+    overflow: hidden;
+    max-height: auto;
+    transition: all .3s linear;
+}
+
+aside nav ul.closed {
+    max-height: 0;
+}
+
+aside nav a {
+    color: currentColor;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+aside nav a:hover {
+    transform: scale(1.2);
+}
+
+.add-task-modal-container .add-task-modal, .edit-task-modal-container .edit-task-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    min-width: 50vw;
+    background-color: white;
+    z-index: 100;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.add-task-modal-container.closed .add-task-modal, .add-task-modal-container.closed .add-task-modal-bg, .edit-task-modal-container.closed .edit-task-modal, .edit-task-modal-container.closed .edit-task-modal-bg {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.add-task-modal .close-btn, .edit-task-modal .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: .3s ease;
+}
+
+.add-task-modal .close-btn:hover, .edit-task-modal .close-btn:hover {
+    transform: scale(1.05);
+    background-color: rgb(214, 0, 0);
+}
+
+.add-task-modal h3, .edit-task-modal h3 {
+    font-size: 2rem;
+}
+
+.add-task-modal form>div, .edit-task-modal form>div {
+    margin: 1rem 0 0 0;
+}
+
+.add-task-modal form>div>.select-label-container, .edit-task-modal form>div>.select-label-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-task-modal form>div>.select-label-container .add-btn, .edit-task-modal form>div>.select-label-container .add-btn {
+    padding: .3rem .5rem;
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.add-task-modal form>div>.select-label-container .add-btn i, .edit-task-modal form>div>.select-label-container .add-btn i {
+    font-size: .7rem;
+    margin: 0 .3rem 0 0;
+}
+
+.add-task-modal form>div>.select-label-container .add-btn:hover, .edit-task-modal form>div>.select-label-container .add-btn:hover {
+    transform: scale(1.03);
+}
+
+.add-task-modal form input, .add-task-modal form textarea, .add-task-modal form select, .edit-task-modal form input, .edit-task-modal form textarea, .edit-task-modal form select {
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+    margin-top: .5rem;
+}
+
+.add-task-modal form textarea, .edit-task-modal form textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.add-task-modal form button[type="submit"], .edit-task-modal form button[type="submit"] {
+    width: 100%;
+    padding: 1rem .5rem;
+    margin: 3rem 0 0 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: all .2s ease;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.add-task-modal form button[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+.edit-task-modal form button[type="submit"] {
+    background-color: orange;
+    color: white;
+}
+
+.add-task-modal form button[type="submit"]:hover, .edit-task-modal form button[type="submit"]:hover {
+    transform: scale(1.01);
+}
+
+.add-task-modal-container .add-task-modal-bg, .edit-task-modal-container .edit-task-modal-bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+}
+
+main {
+    padding: 3rem;
+}
+
+main .kanban {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .kanban .kanban-options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .kanban .kanban-options div#add-task-btn {
+    padding: 1rem 2rem;
+    background-color: green;
+    color: white;
+    border-radius: 1rem;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+main .kanban .kanban-options div#add-task-btn:hover {
+    transform: scale(1.03);
+    background-color: rgb(0, 109, 0);
+}
+
+main .kanban .kanban-content {
+    width: 100%;
+    padding: 1rem;
+    margin: 3rem 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 2rem;
+}
+
+main .kanban .kanban-content .status-container {
+    height: fit-content;
+    width: auto;
+    max-width: 15rem;
+}
+
+main .kanban .kanban-content .status-container .status-header {
+    padding: 1rem 4rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .kanban .kanban-content .status-container .status-body {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: .3rem solid #1c1c1c;
+    border-top: none;
+    border-radius: 0 0 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+main .kanban .kanban-content .status-container .status-body .task-container {
+    background-color: orange;
+    width: 100%;
+    border-radius: .3rem;
+    padding: .3rem 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.temp-status-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.temp-status-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.temp-status-input button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.temp-status-input .confirm-status-btn {
+    background-color: #4CAF50;
+}
+
+.temp-status-input .cancel-status-btn {
+    background-color: #f44336;
+}
+
+#statusAddInput {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px;
+    min-height: 40px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#statusAddInput:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+#statusAddInput option {
+    padding: 8px;
+    background-color: white;
+    color: black;
+}

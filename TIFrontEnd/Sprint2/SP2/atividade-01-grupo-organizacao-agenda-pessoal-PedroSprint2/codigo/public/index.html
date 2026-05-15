@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soshi</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Akatab' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="./assets/js/menuResponsivo.js"></script>
+  <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/login.js"></script>
+  <script src="./assets/js/sobrenos.js"></script>
+  <script src="./assets/js/modalTextos.js"></script>
+  <script src="./assets/js/dadosnegocio.js"></script>
+  <script src="./assets/js/carrosselLPs.js"></script>
+  <script src="./assets/js/carrosselOpinioesUsuarios.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="barra-info">
+      <img src="./assets/images/logo.svg" alt="Logo" class="logo">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+          <li><a href="index.html#dados-negocio">Estatísticas</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="dados-usuario">
+        <span id="userInfo"></span>
+        <a href="modulos/login/login.html" class="btn-login">Entrar</a>
+      </div>
+
+      <div class="menu-icon">
+        <i id="iconeAbrir" class="fa fa-bars" onclick="abrirMenu()"></i>
+        <i id="iconeFechar" class="fa fa-times-circle" onclick="fecharMenu()" style="display: none;"></i>
+      </div>
+
+      <div id="menuMobile" class="overlay">
+        <div class="overlay-content">
+          <a href="modulos/login/login.html">Entrar</a>
+          <a href="index.html#sobre-nos">Sobre Nós</a>
+          <a href="index.html#dados-negocio">Estatísticas</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contato.html">Contato</a></li>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Lorem ipsum dolor </h1>
+        <p>sit amet consectetur adipisicing elit. Unde rerum amet ducimus, aut, .</p>
+        <a href="#planos" class="btn-primario">Ver Planos</a>
+      </div>
+      <div class="hero-imagem">
+        <img src="./assets/images/hero-illustration.svg" alt="Ilustração Promocional" />
+      </div>
+    </section>
+
+
+    <!-- Carrossel LP -->
+    <section class="carrossel-containerLP">
+      <h2 class="carrossel-titulo">Ofertas Promocionais</h2>
+      <div class="carrossel-wrapperLP">
+        <div id="carrosselLP" class="carrosselLP"></div>
+        <button class="seta seta-esquerda" onclick="mudarSlideLP(-1)">&#10094;</button>
+        <button class="seta seta-direita" onclick="mudarSlideLP(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Seção de Vantagens -->
+    <section class="vantagens">
+      <h2>Por que escolher nosso sistema?</h2>
+      <div class="grid-vantagens">
+        <div class="card">
+          <i class="fa fa-lock"></i>
+          <h3>Segurança</h3>
+          <p>Seus dados estão protegidos com as melhores práticas.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-bolt"></i>
+          <h3>Rapidez</h3>
+          <p>Respostas e carregamentos imediatos.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-users"></i>
+          <h3>Comunidade</h3>
+          <p>Milhares de usuários satisfeitos com nossa solução.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Carrossel Opiniões -->
+    <section class="carrossel-containerOpinioes">
+      <h2 class="carrossel-titulo">O que dizem nossos usuários</h2>
+      <div class="carrossel-wrapperOpinioes">
+        <div id="carrosselOpinioes" class="carrosselOpinioes"></div>
+        <button class="seta seta-esquerda" onclick="mudarSlideOpinioes(-1)">&#10094;</button>
+        <button class="seta seta-direita" onclick="mudarSlideOpinioes(1)">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dados de Negócios -->
+  <section id="dados-negocio" class="dados-negocio">
+    <h2>Estatísticas do Sistema</h2>
+    <div class="info-boxes">
+      <div class="info-box">
+        <i class="bi bi-person-fill"></i>
+        <h3 id="totalUsuarios">0</h3>
+        <p>Número de Usuários</p>
+      </div>
+      <div class="info-box">
+        <i class="bi bi-list-check"></i>
+        <h3 id="totalTarefas">0</h3>
+        <p>Total de Tarefas Criadas</p>
+      </div>
+    </div>
+  </section>
+
+  <!---Sobre Nós-->
+  <section id="sobre-nos" class="sobre-nos">
+    <h2>Sobre Nós</h2>
+    <div class="membros-equipe" id="containerEquipe">
+    </div>
+  </section>
+
+  <footer id="contato" class="footer-soshi">
+    <div class="footer-content">
+      <div class="footer-col logo-col">
+        <img src="./assets/images/logo.svg" alt="Logo Soshi" class="footer-logo">
+        <p>Transformamos sua produtividade a partir de uma aplicação simples, eficiente e objetiva.</p>
+        <div class="social-icons">
+          <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+          <a href="linkedin.com"><i class="bi bi-linkedin"></i></a>
+          <a href="youtube.com"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+          <li><a href="index.html#dados-negocio">Estatísticas</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contatos</h4>
+        <p><i class="bi bi-envelope"></i> contato@soshi.com.br</p>
+        <p><i class="bi bi-whatsapp"></i> (31) 3319-4746</p>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <img src="./assets/images/logoPUC.png" alt="Logo PUC Minas" class="footer-logo-puc">
+      <p>&copy; 2025 Soshi | Todos os direitos reservados</p>
+      <div class="footer-links">
+        <a onclick="abrirModal('modalTermos', './assets/text/termos.txt', 'textoTermos')">Termos de Uso</a>
+        <span>|</span>
+        <a onclick="abrirModal('modalPrivacidade', './assets/text/privacidade.txt', 'textoPrivacidade')">Política de
+          Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modalTermos" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalTermos')">&times;</span>
+      <h2>Termos de Serviço</h2>
+      <pre id="textoTermos"></pre>
+    </div>
+  </div>
+
+  <div id="modalPrivacidade" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalPrivacidade')">&times;</span>
+      <h2>Política de Privacidade</h2>
+      <pre id="textoPrivacidade"></pre>
+    </div>
+  </div>
+
+</body>
+
+</html>

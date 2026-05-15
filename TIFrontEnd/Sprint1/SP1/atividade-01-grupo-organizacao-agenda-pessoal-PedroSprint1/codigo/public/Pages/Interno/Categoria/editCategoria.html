@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+    <link rel="stylesheet" href="cat.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="cat.js" defer></script>
+</head>
+<body>
+    <section class="scAdd">
+        <span class="txtTitulo">Editar Categoria:</span>
+    </section>
+
+    <section class="secFormEdit">
+        <form class="formEdit">
+            <label class="lbText">Nome:</label>
+            <input class="inputAdd" type="text">
+            <label class="lbText">Descricao:</label>
+            <input class="inputAdd" type="text">
+            <Label class="lbText">Cor:</Label>
+            <input class="inputAdd" type="color">
+
+            <button class="btEdit" type="submit">Editar</button>
+        </form>
+    </section>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+ 
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoriaId = urlParams.get('id');
+    
+            if (categoriaId) {
+ 
+                fetch(`http://localhost:3000/categorias/${categoriaId}`)
+                    .then(response => response.json())
+                    .then(categoria => {
+                
+                        document.querySelector('.formEdit input[type="text"]:nth-of-type(1)').value = categoria.nome;
+                        document.querySelector('.formEdit input[type="text"]:nth-of-type(2)').value = categoria.descricao;
+                        document.querySelector('.formEdit input[type="color"]').value = categoria.cor;
+                    })
+                    .catch(error => console.error('Erro ao carregar categoria:', error));
+            }
+
+            const form = document.querySelector('.formEdit');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+        
+                const nome = document.querySelector('.formEdit input[type="text"]:nth-of-type(1)').value;
+                const descricao = document.querySelector('.formEdit input[type="text"]:nth-of-type(2)').value;
+                const cor = document.querySelector('.formEdit input[type="color"]').value;
+        
+                const categoriaAtualizada = {
+                    nome: nome,
+                    descricao: descricao,
+                    cor: cor
+                };
+        
+                fetch(`http://localhost:3000/categorias/${categoriaId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(categoriaAtualizada)
+                })
+                .then(response => response.json())
+                .then(() => {
+                    alert('Categoria atualizada com sucesso!');
+                    window.location.href = 'categoria.html';
+                })
+                .catch(error => console.error('Erro ao atualizar categoria:', error));
+            });
+        });
+    </script>
+</body>
+</html>

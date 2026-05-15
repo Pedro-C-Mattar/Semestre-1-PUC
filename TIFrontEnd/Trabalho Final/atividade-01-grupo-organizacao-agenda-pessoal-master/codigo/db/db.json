@@ -1,0 +1,342 @@
+{
+  "usuarios": [
+    {
+      "id": "b8X922-",
+      "nome": "Admin",
+      "login": "admin",
+      "senha": "1234",
+      "email": "admin@gmail.com",
+      "admin": true
+    },
+    {
+      "nome": "lucca",
+      "login": "lucca.lopes",
+      "email": "luccapsl211@gmail.com",
+      "senha": "123",
+      "admin": false,
+      "id": "joQ9zxd"
+    },
+    {
+      "id": "abl59n-",
+      "nome": "ENZo",
+      "login": "enzo",
+      "senha": "1234",
+      "email": "enzo@gmail.com",
+      "admin": true
+    },
+    {
+      "nome": "pedro",
+      "login": "pedro",
+      "email": "pedro@gmail.com",
+      "senha": "123",
+      "admin": false,
+      "id": "o0MXyZO"
+    },
+    {
+      "nome": "mateus",
+      "login": "mateus",
+      "email": "mateus@gmail.com",
+      "senha": "123",
+      "admin": false,
+      "id": "IcKBpzO"
+    },
+    {
+      "nome": "rommel",
+      "login": "rommel",
+      "email": "rommel@gmail.com",
+      "senha": "123",
+      "admin": true,
+      "id": "UTF0bk-"
+    },
+    {
+      "nome": "joao",
+      "login": "joao",
+      "email": "joao@gmail.com",
+      "senha": "123",
+      "admin": true,
+      "id": "ZYUhbnV"
+    },
+    {
+      "nome": "luciana",
+      "login": "luciana",
+      "email": "luciana@gmail.com",
+      "senha": "123",
+      "admin": true,
+      "id": "vt6CXGX"
+    },
+    {
+      "id": "c807",
+      "nome": "Enzo Russo",
+      "email": "enzo1@gmail.com",
+      "senha": "12345",
+      "favourites": []
+    }
+  ],
+  "funcionalidadesApp": [
+    {
+      "id": "1",
+      "titulo": "Organize tarefas com eficiência",
+      "descricao": "O Soshi permite gerenciar tarefas com poucos cliques, priorizando o que realmente importa no seu dia a dia.",
+      "url": "../../assets/images/carousel_1.svg"
+    },
+    {
+      "id": "2",
+      "titulo": "Desenvolva sua produtividade",
+      "descricao": "Compartilhe tarefas e acompanhe o progresso em tempo real. Seja produtivo de forma simples e eficaz.",
+      "url": "../../assets/images/carousel_2.svg"
+    },
+    {
+      "id": "3",
+      "titulo": "Calendário e Kanban integrados",
+      "descricao": "Utiliza a metodologia Kanban para organizar suas tarefas de forma visual e intuitiva, com integração ao calendário para melhor planejamento.",
+      "url": "../../assets/images/carousel_3.svg"
+    }
+  ],
+  "carrosselOpinioesUsuarios": [
+    {
+      "id": "1",
+      "nome": "Fernanda Martins",
+      "cargo": "Coordenadora de Projetos",
+      "cidade": "São Paulo/SP",
+      "depoimento": "Com o Soshi, eu consigo finalmente entregar tarefas no prazo e com mais organização.",
+      "foto": "../../assets/images/usuarios/fernanda.jpg"
+    },
+    {
+      "id": "2",
+      "nome": "Lucas Ribeiro",
+      "cargo": "Desenvolvedor Full Stack",
+      "cidade": "Belo Horizonte/MG",
+      "depoimento": "Uso o Soshi todos os dias para organizar meu dia-a-dia. A interface é rápida, intuitiva e me economiza tempo.",
+      "likes": 11,
+      "foto": "../../assets/images/usuarios/lucas.jpg"
+    },
+    {
+      "id": "3",
+      "nome": "Juliana Lopes",
+      "cargo": "Consultora de Marketing",
+      "cidade": "Curitiba/PR",
+      "depoimento": "Nunca foi tão fácil acompanhar o andamento do meu rendimento. O Soshi me dá visibilidade total.",
+      "foto": "../../assets/images/usuarios/juliana.jpg"
+    },
+    {
+      "id": "4",
+      "nome": "Carlos Tavares",
+      "cargo": "Gerente de Produto",
+      "cidade": "Porto Alegre/RS",
+      "depoimento": "A organização do Soshi me permite focar no que realmente importa.",
+      "foto": "../../assets/images/usuarios/carlos.jpg"
+    },
+    {
+      "id": "5",
+      "nome": "Renata Silveira",
+      "cargo": "Designer UX/UI",
+      "cidade": "Recife/PE",
+      "depoimento": "O Kanban e o Calendário me ajudem absurdamente. O Soshi virou parte essencial da minha vida.",
+      "foto": "../../assets/images/usuarios/renata.jpg"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "7e8b",
+      "titulo": "Teste 1",
+      "descricao": "vcdnjsbvcdsa",
+      "categorias": [
+        "2",
+        "1"
+      ],
+      "status": [
+        "1"
+      ],
+      "dataHora": "2025-06-17T13:38"
+    },
+    {
+      "id": "4cea",
+      "titulo": "Teste 1",
+      "descricao": "vdfsavdsavdsa",
+      "categorias": [
+        "2",
+        "1"
+      ],
+      "status": [
+        "1"
+      ],
+      "dataHora": "2025-06-17T13:39"
+    },
+    {
+      "id": "09b0",
+      "titulo": "Teste 2",
+      "descricao": "vdsavdsavdsavdsavdsa",
+      "categorias": [
+        "3",
+        "4"
+      ],
+      "status": [
+        "2"
+      ],
+      "dataHora": "2025-07-03T13:40"
+    },
+    {
+      "id": "6b46",
+      "titulo": "Teste 3",
+      "descricao": "vfdsabfsdavdsacds",
+      "categorias": [
+        "4",
+        "1"
+      ],
+      "status": [
+        "3"
+      ],
+      "dataHora": "2025-07-18T13:40"
+    },
+    {
+      "id": "9896",
+      "titulo": "Teste 4",
+      "descricao": "jmkonivasbcvbdsa",
+      "categorias": [
+        "3",
+        "4",
+        "1"
+      ],
+      "status": [
+        "4"
+      ],
+      "dataHora": "2025-06-25T13:40"
+    },
+    {
+      "id": "b3fc",
+      "titulo": "vdsavdsavdsabvsabfsdacdsacdacdsacvdsavdsavdsavdsacdsavcdsavsa",
+      "descricao": "vdsavdsavdsabvsabfsdacdsacdacdsacvdsavdsavdsavdsacdsavcdsavsa",
+      "categorias": [
+        "3",
+        "4",
+        "1"
+      ],
+      "status": [
+        "3"
+      ],
+      "dataHora": "2025-06-24T14:19"
+    }
+  ],
+  "status": [
+    {
+      "id": "1",
+      "nome": "A fazer"
+    },
+    {
+      "id": "2",
+      "nome": "Em andamento"
+    },
+    {
+      "id": "3",
+      "nome": "Feito"
+    },
+    {
+      "id": "4",
+      "nome": "Finalizado"
+    }
+  ],
+  "categorias": [
+    {
+      "nome": "foiiiisdgsdg",
+      "descricao": "boaaaaaaaa",
+      "cor": "#004040",
+      "id": "45ea"
+    },
+    {
+      "id": "c82e",
+      "nome": "hhhf",
+      "descricao": "aaaad",
+      "cor": "#ff0080"
+    },
+    {
+      "nome": "teste dois",
+      "descricao": "boaaaa",
+      "cor": "#808080",
+      "id": "69c7"
+    },
+    {
+      "id": "2b5d",
+      "nome": "seegseg",
+      "descricao": "sadgasdg",
+      "cor": "#008080"
+    }
+  ],
+  "sobreNos": [
+    {
+      "titulo": "Nossa Missão",
+      "descricao": "Conectar pessoas, tarefas e produtividade de forma simples e eficiente com uma plataforma robusta e acessível.",
+      "id": "549b"
+    }
+  ],
+  "equipe": [
+    {
+      "nome": "Lucca de Paula",
+      "descricao": "21 anos. Responsável pela homepage, identidade visual, Portal Admin e pela infraestrutura de Cloud do Soshi.",
+      "imagem": "../../assets/images/lucca.jpg",
+      "id": "98be"
+    },
+    {
+      "nome": "Enzo Russo",
+      "descricao": "Estudante de Ciências da Computação. Responsável pelo Kanban, CRUD de tarefas, login, e busca de tarefas",
+      "imagem": "../../assets/images/enzo.jpeg",
+      "id": "b19f"
+    },
+    {
+      "nome": "Pedro Mattar",
+      "descricao": "18 anos. Estudante de Ciências da Computação. Responsável pelo CRUD de Categorias e pelo Painel de Usuário.",
+      "imagem": "../../assets/images/pedro.jpg",
+      "id": "2896"
+    },
+    {
+      "nome": "Mateus Queiroz",
+      "descricao": "19 anos, responsável pelo calendário e categorias.",
+      "imagem": "../../assets/images/mateus.jpg",
+      "id": "0d90"
+    }
+  ],
+  "faq": [
+    {
+      "pergunta": "Como criar uma tarefa?",
+      "resposta": "Acesse sua área de usuário, clique em 'Nova Tarefa' e preencha os dados.",
+      "id": "c9fa"
+    },
+    {
+      "pergunta": "Como alterar minha senha?",
+      "resposta": "Vá em Configurações > Segurança e atualize sua senha.",
+      "id": "3a92"
+    },
+    {
+      "pergunta": "Meus dados estão seguros?",
+      "resposta": "Sim. Utilizamos criptografia e práticas modernas de segurança.",
+      "id": "e091"
+    },
+    {
+      "pergunta": "Como entrar em contato com o suporte?",
+      "resposta": "Você pode usar os canais disponíveis no rodapé: e-mail ou WhatsApp.",
+      "id": "5547"
+    }
+  ],
+  "contatos": [
+    {
+      "nome": "TESTE",
+      "email": "teste@gmail.com",
+      "mensagem": "teste",
+      "data": "2025-06-03T17:47:45.762Z",
+      "id": "1"
+    },
+    {
+      "nome": "teste",
+      "email": "teste@gmail.com",
+      "mensagem": "123",
+      "data": "2025-06-22T01:44:07.403Z",
+      "id": "3O-e1WZ"
+    },
+    {
+      "id": "4487",
+      "nome": "admin",
+      "email": "123@gmaio.com",
+      "mensagem": "123",
+      "data": "2025-06-22T04:13:31.353Z"
+    }
+  ]
+}

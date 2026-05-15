@@ -1,0 +1,35 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Soshi
+authors:
+  - family-names: de Paula Silva Lopes
+    given-names: Lucca 
+  - family-names: Carvalho Mattar
+    given-names: Pedro 
+  - family-names: Magalhães Queiroz
+    given-names: Mateus 
+  - family-names: de Oliveira Russo Miranda
+    given-names: Enzo 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Oliveira Caetano
+    given-names: João Carlos
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Freitas Diniz
+    given-names: Luciana Mara
+keywords:
+  - Organização Pessoal
+  - Gestão de Rotina
+  - Produtividade
+  - Agenda Digital
+  - Organização
+  - Gestão
+repository-code: https://github.com/ICEI-PUC-Minas-PMGCC-TI/atividade-01-grupo-organizacao-agenda-pessoal
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-05-31

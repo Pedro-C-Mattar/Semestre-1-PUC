@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/fadeInAnimation.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./calendario.css">
+    <title>Soshi</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="open-navigation-btn">Abrir painel</div>
+        <div class="left-info">
+            <a href="../Home/">
+                <img src="../../assets/images/logo/image-removebg-preview.png" alt="">
+            </a>
+        </div>
+        <div class="profile-btn-container">
+            <div class="profile-btn">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown-container">
+                <div class="profile-dropdown-content" id="dadosPerfil">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="closed">
+        <nav>
+            <div>
+                <h5 class="pages-title">Exibições</h5>
+                <ul class="aside-nav-ul closed">
+                    <a href="#" id="calendar-tab" data-display="calendar" class="nav-tab">
+                        <li>Calendário</li>
+                    </a>
+                    <a href="#" id="kanban-tab" data-display="kanban" class="nav-tab">
+                        <li>Kanban</li>
+                    </a>
+                    <!-- <a href="#" id="list-tab" data-display="list" class="nav-tab">
+                        <li>Lista</li>
+                    </a> -->
+                    <!-- <a href="#" id="linkCategoria">
+                        <li>Config Categorias</li>
+                    </a> -->
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="view-content active" id="kanban-view">
+            <div class="kanban">
+                <div class="kanban-options">
+                    <div></div>
+                    <div class="search-container">
+                        <input type="text" class="search-input">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <div class="search-content hidden">
+
+                        </div>
+                    </div>
+                    <div class="add-task-btn">Adicionar tarefa</div>
+                </div>
+                <div class="kanban-content">
+
+                </div>
+            </div>
+        </div>
+        <div class="view-content" id="calendar-view">
+            <div class="kanban-options">
+                <div></div>
+                <div class="search-container">
+                    <input type="text" class="search-input">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <div class="search-content hidden">
+
+                    </div>
+                </div>
+                <div class="add-task-btn">Adicionar tarefa</div>
+            </div>
+            <div class="calendario-container">
+                <div class="calendar-header">
+                    <button class="nav-button" onclick="previousMonth()">◀ Anterior</button>
+                    <div class="month-year" id="monthYear"></div>
+                    <button class="nav-button" onclick="nextMonth()">Próximo ▶</button>
+                </div>
+
+                <div class="calendar-grid" id="calendar">
+                    <div class="day-header">Dom</div>
+                    <div class="day-header">Seg</div>
+                    <div class="day-header">Ter</div>
+                    <div class="day-header">Qua</div>
+                    <div class="day-header">Qui</div>
+                    <div class="day-header">Sex</div>
+                    <div class="day-header">Sáb</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="add-task-modal-container closed">
+        <div class="add-task-modal">
+            <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+            <h3>
+                Adicionar nova tarefa
+            </h3>
+            <form method="post" id="add-tarefa-form">
+                <div>
+                    <label for="">Título:</label>
+                    <input type="text" id="tituloAddInput">
+                </div>
+                <div>
+                    <label for="">Descrição:</label>
+                    <textarea name="" id="descricaoAddInput">
+
+                    </textarea>
+                </div>
+                <div>
+                    <div class="select-label-container">
+                        <label for="">Categoria(s)</label>
+                        <a href="../Categoria" class="add-btn"><i class="fa-solid fa-plus"></i>Gerenciar categorias</a>
+                    </div>
+                    <select name="" id="categoriasAddInput" multiple>
+
+                    </select>
+                </div>
+                <div>
+                    <div class="select-label-container">
+                        <label for="">Status</label>
+                        <div class="add-btn" data-action="add-status"><i class="fa-solid fa-plus"></i>Adicionar status
+                        </div>
+                    </div>
+                    <select name="" id="statusAddInput">
+                    </select>
+                </div>
+                <div>
+                    <label for="">Data de conclusão</label>
+                    <input type="datetime-local" id="dateTimeAddInput">
+                </div>
+                <button class="add-form-submit" type="submit">Adicionar tarefa</button>
+            </form>
+        </div>
+        <div class="add-task-modal-bg"></div>
+    </div>
+
+    <div class="edit-task-modal-container closed">
+        <div class="edit-task-modal">
+            <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+            <h3>
+                Ver/Editar tarefa
+            </h3>
+            <form method="post" id="edit-tarefa-form">
+                <div>
+                    <label for="">Título:</label>
+                    <input type="text" id="tituloEditInput">
+                </div>
+                <div>
+                    <label for="">Descrição:</label>
+                    <textarea name="" id="descricaoEditInput">
+
+                    </textarea>
+                </div>
+                <div>
+                    <div class="select-label-container">
+                        <label for="">Categoria(s)</label>
+                        <a href="../Categoria" class="add-btn"><i class="fa-solid fa-plus"></i>Gerenciar categorias</a>
+                    </div>
+                    <select name="" id="categoriasEditInput" multiple>
+                    </select>
+                </div>
+                <div>
+                    <div class="select-label-container">
+                        <label for="">Status</label>
+                        <div class="add-btn" data-action="add-status"><i class="fa-solid fa-plus"></i>Adicionar status</div>
+                    </div>
+                    <select name="" id="statusEditInput">
+
+                    </select>
+                </div>
+                <div>
+                    <label for="">Data de conclusão</label>
+                    <input type="datetime-local" id="dateTimeEditInput">
+                </div>
+                <button class="delete-form-submit" type="button">Excluir tarefa</button>
+                <button class="edit-form-submit" type="submit">Editar tarefa</button>
+            </form>
+        </div>
+        <div class="edit-task-modal-bg"></div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./calendario.js"></script>
+    <script type="module" src="../painelUsuario/perfil.js"></script>
+</body>
+
+</html>

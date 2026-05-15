@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+span.txtTitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+span.txtCat{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-overflow: inherit;
+}
+
+a.lnkVoltar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    margin: 20px;
+    border: solid 2px #000000;
+}
+
+nav.nvVoltar{
+    margin: 20px;
+    height: 50px;
+}
+
+section.scAdd{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+
+section.scCat{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; 
+}
+
+div.dvBtns{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgb(219, 217, 217);
+    border-radius: 0px 0px 10px 10px;
+    width: 91%;
+    border: solid 2px #000000;
+}
+
+div.dvCat{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    border-radius: 10px 10px 10px 10px;
+    border: solid 2px #000000;
+    padding: 10px;
+    width: 25%;
+    height: 220px;
+}
+
+a.btnAdd{
+    display: flex;
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e07967;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+a.btn{
+    display: flex;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e07967;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+button.btn{
+    display: flex;
+    border: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #e07967;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+button.btn:hover{
+    filter: brightness(70%);
+}
+a.btn:hover{
+    filter: brightness(70%);
+}
+a.btnAdd:hover{
+    filter: brightness(70%);
+}
+
+section.secFormAdd{
+    width: 90%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+form.formAdd{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+input.inputAdd{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+    border: solid 2px #e07967;
+}
+
+label.lbText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+button.btAdd{
+    width: 150px;
+    font-size: 25px;
+    background-color: #e07967;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+button.btAdd:hover{
+    filter: brightness(70%);
+}
+
+
+section.secFormEdit{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+form.formEdit{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+button.btEdit{
+    width: 150px;
+    font-size: 25px;
+    background-color: #e07967;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+button.btEdit:hover{
+    filter: brightness(70%);
+}

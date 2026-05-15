@@ -1,0 +1,23 @@
+name: Purge Cloudflare Cache
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'codigo/**' 
+  
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    env:
+      CF_API_TOKEN: 'Mi4rUEdvvdfsC9pBJnuUfAsERe3JOHXAFu-v7tj5'
+      CF_ZONE_ID: 'fa3bdb89a14f45c7df0e8759f22aebf1'
+
+    steps:
+      - name: Purge All Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}'

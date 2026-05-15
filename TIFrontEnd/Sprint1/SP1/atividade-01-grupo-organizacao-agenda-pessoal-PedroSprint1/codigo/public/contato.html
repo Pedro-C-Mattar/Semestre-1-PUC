@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Soshi</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" href="./assets/favicon/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Akatab' rel='stylesheet'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="./assets/js/contato.js"></script>
+  <script src="./assets/js/modalTextos.js"></script>
+  <script src="./assets/js/menuResponsivo.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="barra-info">
+      <img src="./assets/images/logo.svg" alt="Logo" class="logo">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+          <li><a href="index.html#dados-negocio">Estatísticas</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="dados-usuario">
+        <span id="userInfo"></span>
+        <a href="modulos/login/login.html" class="btn-login">Entrar</a>
+      </div>
+
+      <div class="menu-icon">
+        <i id="iconeAbrir" class="fa fa-bars" onclick="abrirMenu()"></i>
+        <i id="iconeFechar" class="fa fa-times-circle" onclick="fecharMenu()" style="display: none;"></i>
+      </div>
+
+      <div id="menuMobile" class="overlay">
+        <div class="overlay-content">
+          <a href="modulos/login/login.html">Entrar</a>
+          <a href="index.html#sobre-nos">Sobre Nós</a>
+          <a href="index.html#dados-negocio">Estatísticas</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contato.html">Contato</a></li>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 8em;">
+    <section class="contato-info">
+      <h2>Fale com o Soshi</h2>
+      <div class="contato-detalhes">
+        <div class="info-item">
+          <i class="bi bi-envelope"></i>
+          <span>contato@soshi.com.br</span>
+        </div>
+        <div class="info-item">
+          <i class="bi bi-whatsapp"></i>
+          <span>(31) 3319-4746</span>
+        </div>
+      </div>
+    </section>
+    <section class="contato-section">
+      <div class="container-contato">
+        <h2>Entre em Contato</h2>
+        <form id="formContato" class="form-contato">
+          <input type="text" id="nome" placeholder="Seu nome" required>
+          <input type="email" id="email" placeholder="Seu e-mail" required>
+          <textarea id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+        <div id="statusEnvio"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="footer-soshi">
+    <div class="footer-content">
+      <div class="footer-col logo-col">
+        <img src="./assets/images/logo.svg" alt="Logo Soshi" class="footer-logo">
+        <p>Transformamos tarefas em soluções organizadas para sua equipe.</p>
+        <div class="social-icons">
+          <a href="instagram.com"><i class="bi bi-instagram"></i></a>
+          <a href="linkedin.com"><i class="bi bi-linkedin"></i></a>
+          <a href="youtube.com"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+          <li><a href="index.html#dados-negocio">Estatísticas</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contatos</h4>
+        <p><i class="bi bi-envelope"></i> contato@soshi.com.br</p>
+        <p><i class="bi bi-whatsapp"></i> (31) 3319-4746</p>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <img src="./assets/images/logoPUC.png" alt="Logo PUC Minas" class="footer-logo-puc">
+      <p>&copy; 2025 Soshi | Todos os direitos reservados</p>
+      <div class="footer-links">
+        <a onclick="abrirModal('modalTermos', './assets/text/termos.txt', 'textoTermos')">Termos de Uso</a>
+        <span>|</span>
+        <a onclick="abrirModal('modalPrivacidade', './assets/text/privacidade.txt', 'textoPrivacidade')">Política de
+          Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modalTermos" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalTermos')">&times;</span>
+      <h2>Termos de Serviço</h2>
+      <pre id="textoTermos"></pre>
+    </div>
+  </div>
+
+  <div id="modalPrivacidade" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalPrivacidade')">&times;</span>
+      <h2>Política de Privacidade</h2>
+      <pre id="textoPrivacidade"></pre>
+    </div>
+  </div>
+
+</body>
+
+</html>

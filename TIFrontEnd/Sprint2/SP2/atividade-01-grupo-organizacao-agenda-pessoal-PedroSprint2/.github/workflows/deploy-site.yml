@@ -1,0 +1,54 @@
+name: Deploy do Site do Soshi
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'codigo/**' 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH na EC2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: 3.144.194.144        
+          username: ubuntu             
+          port: 22
+          key: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIEpAIBAAKCAQEAotrVUjLYo0eQY6+g7S+vP2uCH3xSQMYi5mO71JjXXHiPy5ih
+            DMsdmkQxOZptvhIEmINI8rlR+b26o4U+KmfTaUfCCOREhZsJ8YPqXj2R8M5qTdr6
+            bRkGXlb2oJmkX54DB5d2SN7TGbng+oIqNffZNhyiAVw5rkHs1tfUinHbeQ+z1VT8
+            b9nFqAbbrpxUFc9JHgL8PcZgLMqf2L++RT5WpjYHEXu58lzDtZn6aDsCCYRInb5x
+            6rLdqkxpsuDxpaTMktjhvdak3pG+cdsQt2xDjY4gP63o06ego0J5v+BO1E7ESW1O
+            uI5avBP24A6Y9bM2mfP2CT2WKSmJQuHd69QyaQIDAQABAoIBADNKmv89lm+unXJY
+            IWYyq45c7Om/vSQ7g0huxvzJeqLcMeXc13RxEIzCx4It+jxv7lSenL4d0gzHTd4s
+            nAy9EJ/LAvjL9CzkTLhtZMZzu+BNErwcqNztkczqtNiWK2gWGzwr3wxKadBjc9FS
+            Z7sBqb7aO8gT5PLWPqLX7VABVi+FWu8+TB/+iE30DBbBOY93F/VC/NZcYHDe6lZt
+            2KY5SYASoVlyvXj7HGNBHC4XtsiResdHlKqQlTcRNyVXv+/rFYotsmJh9zvh1x1G
+            o1cGoz1iLD689tuiBHPTag4+/J1wan3JWWdX/kQoSSe3bYa+O3VGvZ5EL+JRt07w
+            Evs9G4ECgYEAzFRaPl0zbo6A7CqUSXPgon0M/EyQUiZLmlirST6vkGdl9U05K32t
+            cC4QqXKZ91eFNcWdtmtCiU9GAZKp9OhjQpcn4hSydxI1EdcE1TaSrvvTRVa+QO7a
+            DHg2UKAMQSBJxFYwQsbjJzEVOYWAR8N3nlTuOQJuOWWNK6ZmMS0kx9ECgYEAzAmK
+            XwqRTUiGOGhetM+jxZGOxcUqzuTByBQwM1dS1ic/FDV+YxmhgV1TEyFpRO8WfDgI
+            LRcq+jse1kclxOUa3+3ibZVEp0UvrZIe9yhFhBk1roKTYuD8D/Jxs42HJbi4Pdk4
+            UaZeRgImxWP5fx7c8uaZhyM9LBclh4+RPmVcfxkCgYEAwDuH325dyeCFyCpS8jvz
+            lctiYSdDDBZ9QEu1ciZok8nDcaHibFlDx+t+v3xTABG2AJ3Xv9xvb7FGIoqyHPhZ
+            EjgVTKy+LinSBeOt5039eGTxIiX2vi44tEyQhQ/eF5Nh8zZHFzv4T1HtLv27b0il
+            jC9JJBd2TceNpghZ0mAvX1ECgYEAxAIOSYsvVtzrA9lP0cb+/1b7nwXwP90GQ50R
+            SOEElPIS6OkSx0TiIBJ1MhWQuUYthZuWTyrIgKa20wZ6RBILpT8znC4fS8ltKgML
+            eEfZsDM/nKuXxw93ViKEFAdL43L2m4PHVLjMK9j5Qfruva36d+YLawTxSR/bT8Ud
+            tKFPIFECgYANdwoERE7QaibRwUYfJcLbTjOWrIwf6cS76e0fGOXm6ht0+mdlQoQG
+            m5AjC9BhoiGgPrtENO+6WMoshF/CRPEYCCtYqUQk2yRrtNAlu0XJqrdnywdXpLlX
+            qbLWFVjPXd7CXCUj7JoBzagZr3+R8S0JupUBZE+Rk3MLNeFxekiznA==
+            -----END RSA PRIVATE KEY-----
+          script: |
+            cd /home/ubuntu
+            ./deploy-site.sh

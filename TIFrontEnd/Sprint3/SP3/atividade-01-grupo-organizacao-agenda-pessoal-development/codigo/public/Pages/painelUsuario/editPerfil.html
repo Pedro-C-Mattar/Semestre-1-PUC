@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar</title>
+    <link rel="stylesheet" href="../Interno/styles.css">
+</head>
+<body>
+    <section class="scEditP">
+        <span class="txtTitulo">Editar Perfil:</span>
+    </section>
+
+    <section class="secMudar" id="mudar">
+        <form id="editForm" class="formEditP">
+            <input type="hidden" id="itemId">
+
+            <label class="lbText">Nome:</label>
+            <input class="inputEdit" id="nome" type="text">
+
+            <label class="lbText">Login:</label>
+            <input class="inputEdit" id="login" type="text">
+
+            <label class="lbText">Senha:</label>
+            <input class="inputEdit" id="senha" type="text">
+            
+            <label class="lbText">Email:</label>
+            <input class="inputEdit" id="email" type="email">
+
+            <button class="butaoEdit" type="submit">Editar</button>
+        </form>
+    </section>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

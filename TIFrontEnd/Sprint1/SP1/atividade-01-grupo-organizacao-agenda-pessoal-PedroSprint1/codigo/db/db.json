@@ -1,0 +1,281 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador do Sistema",
+      "login": "admin",
+      "senha": "1234",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "nome": "Usuario Comum",
+      "login": "User",
+      "senha": "1234",
+      "email": "user@abcd.com"
+    },
+    {
+      "id": "3",
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    }
+  ],
+  "carrosselLP": [
+    {
+      "id": "1",
+      "titulo": "Imagem 1",
+      "descricao": "Descrição da Imagem 1",
+      "url": "./assets/images/carousel_1.svg"
+    },
+    {
+      "id": "2",
+      "titulo": "Imagem 2",
+      "descricao": "Descrição da Imagem 2",
+      "url": "./assets/images/carousel_2.svg"
+    },
+    {
+      "id": "3",
+      "titulo": "Imagem 3",
+      "descricao": "Descrição da Imagem 3",
+      "url": "./assets/images/carousel_3.svg"
+    },
+    {
+      "id": "4",
+      "titulo": "Imagem 4",
+      "descricao": "Descrição da Imagem 4",
+      "url": "./assets/images/carousel_4.svg"
+    },
+    {
+      "id": "5",
+      "titulo": "Imagem 5",
+      "descricao": "Descrição da Imagem 5",
+      "url": "./assets/images/carousel_5.svg"
+    }
+  ],
+  "carrosselOpinioesUsuarios": [
+    {
+      "id": "1",
+      "nome": "Amanda",
+      "nota": "Nota 5",
+      "url": "./assets/images/carousel_opinioes_1.svg"
+    },
+    {
+      "id": "2",
+      "nome": "Renato",
+      "nota": "Nota 5",
+      "url": "./assets/images/carousel_opinioes_2.svg"
+    },
+    {
+      "id": "3",
+      "nome": "Loide",
+      "nota": "Nota 5",
+      "url": "./assets/images/carousel_opinioes_3.svg"
+    },
+    {
+      "id": "4",
+      "nome": "Armando",
+      "nota": "Nota 5",
+      "url": "./assets/images/carousel_opinioes_4.svg"
+    },
+    {
+      "id": "5",
+      "nome": "Arlindo",
+      "nota": "Nota 5",
+      "url": "./assets/images/carousel_opinioes_5.svg"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "7e8b",
+      "titulo": "Teste 1",
+      "descricao": "vcdnjsbvcdsa",
+      "categorias": [
+        "2",
+        "1"
+      ],
+      "status": [
+        "1"
+      ],
+      "dataHora": "2025-06-17T13:38"
+    },
+    {
+      "id": "4cea",
+      "titulo": "Teste 1",
+      "descricao": "vdfsavdsavdsa",
+      "categorias": [
+        "2",
+        "1"
+      ],
+      "status": [
+        "1"
+      ],
+      "dataHora": "2025-06-17T13:39"
+    },
+    {
+      "id": "09b0",
+      "titulo": "Teste 2",
+      "descricao": "vdsavdsavdsavdsavdsa",
+      "categorias": [
+        "3",
+        "4"
+      ],
+      "status": [
+        "2"
+      ],
+      "dataHora": "2025-07-03T13:40"
+    },
+    {
+      "id": "6b46",
+      "titulo": "Teste 3",
+      "descricao": "vfdsabfsdavdsacds",
+      "categorias": [
+        "4",
+        "1"
+      ],
+      "status": [
+        "3"
+      ],
+      "dataHora": "2025-07-18T13:40"
+    },
+    {
+      "id": "9896",
+      "titulo": "Teste 4",
+      "descricao": "jmkonivasbcvbdsa",
+      "categorias": [
+        "3",
+        "4",
+        "1"
+      ],
+      "status": [
+        "4"
+      ],
+      "dataHora": "2025-06-25T13:40"
+    },
+    {
+      "id": "b3fc",
+      "titulo": "vdsavdsavdsabvsabfsdacdsacdacdsacvdsavdsavdsavdsacdsavcdsavsa",
+      "descricao": "vdsavdsavdsabvsabfsdacdsacdacdsacvdsavdsavdsavdsacdsavcdsavsa",
+      "categorias": [
+        "3",
+        "4",
+        "1"
+      ],
+      "status": [
+        "3"
+      ],
+      "dataHora": "2025-06-24T14:19"
+    }
+  ],
+  "status": [
+    {
+      "id": "1",
+      "nome": "A fazer"
+    },
+    {
+      "id": "2",
+      "nome": "Em andamento"
+    },
+    {
+      "id": "3",
+      "nome": "Feito"
+    },
+    {
+      "id": "4",
+      "nome": "Finalizado"
+    }
+  ],
+  "categorias": [
+    {
+      "nome": "liam",
+      "descricao": "cabra",
+      "cor": "#c0c0c0",
+      "id": 1
+    },
+    {
+      "nome": "rodgua",
+      "descricao": "valorant",
+      "cor": "#ff0000",
+      "id": 2
+    },
+    {
+      "nome": "felipe",
+      "descricao": "souls like",
+      "cor": "#ff8000",
+      "id": 3
+    },
+    {
+      "nome": "rommel",
+      "descricao": "bom professordd",
+      "cor": "#80ffff",
+      "id": 4
+    }
+  ],
+  "rel_cat_tar": [],
+  "subtarefas": [],
+  "sobreNos": [
+    {
+      "titulo": "Nossa Missão",
+      "descricao": "Conectar pessoas, tarefas e produtividade de forma simples e eficiente com uma plataforma robusta e acessível.",
+      "id": "549b"
+    }
+  ],
+  "equipe": [
+    {
+      "nome": "Lucca de Paula",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "imagem": "./assets/images/lucca.jpg",
+      "id": "98be"
+    },
+    {
+      "nome": "Enzo Russo",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "imagem": "./assets/images/enzo.jpeg",
+      "id": "b19f"
+    },
+    {
+      "nome": "Pedro Mattar",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "imagem": "./assets/images/pedro.jpg",
+      "id": "2896"
+    },
+    {
+      "nome": "Mateus Queiroz",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "imagem": "./assets/images/mateus.jpg",
+      "id": "0d90"
+    }
+  ],
+  "faq": [
+    {
+      "pergunta": "Como criar uma tarefa?",
+      "resposta": "Acesse sua área de usuário, clique em 'Nova Tarefa' e preencha os dados.",
+      "id": "c9fa"
+    },
+    {
+      "pergunta": "Como alterar minha senha?",
+      "resposta": "Vá em Configurações > Segurança e atualize sua senha.",
+      "id": "3a92"
+    },
+    {
+      "pergunta": "Meus dados estão seguros?",
+      "resposta": "Sim. Utilizamos criptografia e práticas modernas de segurança.",
+      "id": "e091"
+    },
+    {
+      "pergunta": "Como entrar em contato com o suporte?",
+      "resposta": "Você pode usar os canais disponíveis no rodapé: e-mail ou WhatsApp.",
+      "id": "5547"
+    }
+  ],
+  "contatos": [
+    {
+      "nome": "TESTE",
+      "email": "teste@gmail.com",
+      "mensagem": "teste",
+      "data": "2025-06-03T17:47:45.762Z",
+      "id": "1"
+    }
+  ]
+}

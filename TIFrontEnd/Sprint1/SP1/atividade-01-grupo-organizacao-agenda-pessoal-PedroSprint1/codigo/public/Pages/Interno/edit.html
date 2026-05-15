@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="secMudar" id="mudar">
+        <form id="editForm" class="formEdit">
+            <input type="hidden" id="itemId">
+
+            <label class="lbText">Nome:</label>
+            <input class="inputEdit" id="nome" type="text">
+
+            <label class="lbText">Login:</label>
+            <input class="inputEdit" id="login" type="text">
+
+            <label class="lbText">Senha:</label>
+            <input class="inputEdit" id="senha" type="text">
+            
+            <label class="lbText">Email:</label>
+            <input class="inputEdit" id="email" type="email">
+
+            <button class="butaoEdit" type="submit">Editar</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemId = urlParams.get('id');
+            if (itemId) {
+                fetch(`http://localhost:3000/usuarios/${itemId}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Perfil não encontrado');
+                        }
+                        return response.json();
+                    })
+                    .then(item => {
+                        document.getElementById('itemId').value = item.id;
+                        document.getElementById('nome').value = item.nome || '';
+                        document.getElementById('login').value = item.login || '';
+                        document.getElementById('senha').value = item.senha || '';
+                        document.getElementById('email').value = item.email || '';
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar perfil:', error);
+                        alert('Erro ao carregar dados do perfil: ' + error.message);
+                    });
+            } else {
+                alert('ID do perfil não especificado na URL');
+                window.location.href = `interno.html?id=${itemId}`;
+            }
+            
+            document.getElementById('editForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const itemId = document.getElementById('itemId').value;
+                if (!itemId) {
+                    alert('ID do perfil não encontrado!');
+                    return;
+                }
+                const updatedItem = {
+                    id: parseInt(itemId),
+                    nome: document.getElementById('nome').value,
+                    login: document.getElementById('login').value,
+                    senha: document.getElementById('senha').value,
+                    email: document.getElementById('email').value
+                };
+                fetch(`http://localhost:3000/usuarios/${itemId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(updatedItem)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Falha ao atualizar');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    alert('Perfil atualizado com sucesso!');
+                    window.location.href = `interno.html?id=${itemId}`; 
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao atualizar o perfil: ' + error.message);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

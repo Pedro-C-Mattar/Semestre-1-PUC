@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Admin - Soshi</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <script type="module" src="./admin.js"></script>
+</head>
+<body>
+  <header>
+    <div class="barra-info">
+      <a href="../Home/">
+        <img src="../../assets/images/logo/image-removebg-preview.png" alt="Logo Soshi" class="logo">
+      </a>
+      <span id="admin-nome" style="color: #180147; font-weight: bold;"></span>
+    </div>
+  </header>
+
+  <main style="margin-top: 120px; padding: 40px;">
+    <h2 style="text-align:center; color: #180147;">Painel de Administração</h2>
+
+    <div id="painel-topo" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div>
+        <label><strong>Escolha o que deseja editar:</strong></label>
+        <select id="painelSelector"></select>
+      </div>
+      <button id="btnVoltar" class="btn btn-secondary">&lt; Voltar</button>
+
+
+    </div>
+
+    <div id="admin-content" class="container mt-5"></div>
+  </main>
+
+
+</body>
+</html>
