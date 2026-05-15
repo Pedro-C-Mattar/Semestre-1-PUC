@@ -1,0 +1,544 @@
+/*Geral*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dbd9d9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Header*/
+
+svg.iconeLogo{
+    width: 60px;
+    fill: #ffffff;
+}
+
+header.cabecalho{
+    background-color: #368900;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+header>a.logoLink{
+    text-decoration: none;
+    width: 15%;
+    padding-left: 10px;
+}
+
+header>a>div.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+span.nomeSite{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+
+header>div.menu{
+    margin-left: 300px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+div.divMenuMobile{
+    display: none;
+
+}
+
+a.itensMenu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #ffffff;
+    border-right: solid 2px #ffffff;
+    padding-right: 20px;
+}
+
+#semBorda{
+    border: none;
+}
+
+span.menuHover{
+    transition: 0.5s;
+}
+
+span.menuHover:hover{
+    filter: brightness(70%);
+}
+
+/*Main*/
+
+main.pesquisa{
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+span.tituloPesquisa{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+}
+
+main>form.formularioPesquisa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input.barraPesquisar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    border: solid 2px #000000;
+    padding: 10px;
+    width: 400px;
+    height: 15px;
+}
+
+button.botaoPesquisar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    border: solid 2px #000000;
+    padding: 5px;
+    width: 200px;
+    height: 35px;
+    transition: 0.5s;
+}
+
+button.botaoPesquisar:hover{
+    filter: brightness(70%);
+}
+
+/*Nav*/
+
+nav.tituloDestaques{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    color: #000000;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+/*Section - Articles*/
+
+section.destaquesMundo, section.destaquesNacional{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+section>a{
+    width: 15%;
+    height: 300px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+section>a>article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+
+
+section>a.destaqueM1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueM2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueM3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueM4{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueM5{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueN1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueN2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueN3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueN4{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+section>a.destaqueN5{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+span.nomeLugar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: #ffffff;
+    padding: 10px;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 1);
+}
+
+a.destaqueM1:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueM2:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueM3:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueM4:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueM5:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueN1:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueN2:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueN3:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueN4:hover{
+    transform: scale(1.1);
+}
+
+a.destaqueN5:hover{
+    transform: scale(1.1);
+}
+
+/*Footer*/
+
+svg.iconesSocial{
+    width: 30px;
+    fill: #ffffff;
+    transition: 0.5s;
+}
+
+svg.iconesSocial:hover{
+    filter: brightness(70%);
+}
+
+footer.rodape{
+    background-color: #368900;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+footer>div.redeSocial{
+    display: flex;
+    gap: 30px;
+}
+
+span.copyright{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1850px){
+    header>div.menu{
+        margin-left: 250px;
+
+    }
+}
+
+@media (max-width: 1403px){
+    header>div.menu{
+        margin-left: 200px;
+
+    }
+    section>a{
+        width: 20%;
+    }
+    section.destaquesMundo, section.destaquesNacional{
+        width: 95%;
+        padding-left: 20px;
+        gap: 50px;
+        justify-content: left;
+        height: 650px;
+    }
+}
+
+@media (max-width: 1300px){
+    header>div.menu{
+        margin-left: 100px;
+        width: 55%;
+    }
+}
+
+@media (max-width: 1150px){
+    section>a{
+        width: 24%;
+    }
+    header>div.menu{
+        margin-left: 80px;
+        width: 60%;
+    }
+    a.itensMenu{
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 850px){
+    section>a{
+        width: 40%;
+    }
+    section.destaquesMundo, section.destaquesNacional{
+        height: 980px;
+        justify-content: center;
+    }
+    header>div.menu{
+        display: none;
+    }
+
+    div.divMenuMobile{
+        display: block;
+        position: relative;
+        top: 150px;
+    }
+
+    input#menuToggle{
+        display: none;
+    }
+
+    label.iconeMenuMobile{
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        color: #ffffff;
+        padding-right: 30px;
+        position: relative; 
+        top: 65px;
+        left: 90px;
+        
+    }
+    
+    ul.listaMenuMobile{
+        display: none;
+        list-style: none;
+        background-color: #ffffff;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        height: 400px;
+        width: 150px;
+        position: relative;
+        top: 75px;
+    }
+    
+    ul.listaMenuMobile>li{
+        padding-top: 60px;
+        padding-left: 10px;
+    }
+
+    a.itensMenuMobile{
+        text-decoration: none;
+        color: #368900;
+    }
+
+    #menuToggle:checked ~ ul{
+        display: block;
+    }
+
+    #menuToggle:not(:checked) ~ ul{
+        display: none;
+    }
+
+    #menuToggle:not(:checked) ~ label.iconeMenuMobile{
+        margin-bottom: 440px;
+        margin-right: 115px;
+    }
+    
+
+    header.cabecalho{
+        justify-content: space-between;
+    }
+
+
+    header>a.logoLink{
+        text-decoration: none;
+        width: 32%;
+    }
+
+    span.tituloPesquisa{
+        font-size: 30px;
+    }
+
+    input.barraPesquisar{
+        width: 350px;
+        height: 10px;
+    }
+    
+    button.botaoPesquisar{
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    nav.tituloDestaques{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px){
+    section>a{
+        width: 44%;
+    }
+
+    section.destaquesMundo, section.destaquesNacional{
+        padding: 10px;
+    }
+
+    footer.rodape{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    nav.tituloDestaques{
+        font-size: 24px;
+    }
+
+    input.barraPesquisar{
+        width: 300px;
+        height: 10px;
+    }
+    
+    button.botaoPesquisar{
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header>a.logoLink{
+        text-decoration: none;
+        width: 40%;
+    }
+}
+
+@media (max-width: 440px){
+    section>a{
+        width: 70%;
+    }
+
+    section.destaquesMundo, section.destaquesNacional{
+        height: 1800px;
+    }
+
+}
